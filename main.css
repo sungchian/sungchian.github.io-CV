@@ -292,7 +292,7 @@ h2 .text{
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-    color: crimson;
+    color: var(--gold_light);
     background: none;
 }
 
@@ -513,7 +513,7 @@ justify-content: center;
 align-items: stretch;
 padding: 60px;
 /* new */
-height: 800px;
+height: auto;
 /* height: 80vh; */
 /* max-height: 600px; */
 background: var(--black);
@@ -690,7 +690,8 @@ background-size: cover;
     height: 100vh;
     width: 100%;
     left: 0;
-    top: -100%;
+    /* new 原本是 -100%*/
+    top: -500%;
     background: #111;
     text-align: center;
     padding-top: 80px;
