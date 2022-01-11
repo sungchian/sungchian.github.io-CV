@@ -1,4 +1,5 @@
 # sungchian.github.io-CV
+https://sungchian.github.io/sungchian.github.io-CV/
 
 ## https://www.behance.net/gallery/126126631/RWD-website-Design-for-CV
 
