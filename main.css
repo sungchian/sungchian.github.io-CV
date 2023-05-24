@@ -247,6 +247,27 @@ h2 .text{
     margin-right: 100px;
 }
 
+/* .goTop {
+    刪除預設樣式
+    background:none;  	
+    outline:none;  	
+    border:none;
+
+    position: fixed;
+    background-image: url("./images/arrow.svg");
+    color: var(--gold);
+    width:50px;
+    height:50px;
+    right: 50px;
+    bottom: 50px;
+    
+} */
+footer .scroll i{
+    position: fixed;
+    font-size: 40px;
+    right: 50px;
+    bottom: 50px;
+}
 /*================================ menu btn style ================================*/
 .menu-btn{
     color: var(--gold);
@@ -283,26 +304,27 @@ h2 .text{
 }
 
 .home-content{
-    font-weight: 600;
+    font-weight: 300;
     font-size: 36px;
     letter-spacing: 10px;
 }
 
 .home-content .second-title{
-    font-weight: 800;
+    padding-top: 10%;
+    font-weight: 600;
     font-size: 72px;
     letter-spacing: 30px;
     color: var(--gold);
 }
 
-.home-content .scroll{
+.home-content .scroll {
     position: absolute;
     left: 50%;
     bottom: 2vh;
     transform: translateX(-50%);
 }
 
-.home-content .scroll a{
+.home-content .scroll a, footer .scroll a{
     color: var(--gold);
 }
 
@@ -412,6 +434,11 @@ h2 .text{
     flex-wrap: nowrap;
 }
 
+.skill-item .skill-name, .skill-item .skill-p ul li{
+    padding-bottom: 30px;
+}
+
+
 .skill-item .skill-name{
     position: relative;
 }
@@ -427,14 +454,25 @@ h2 .text{
     transform: translateX(-50%);
 }
 
-.skill-item img{
+.skill-item .skill-group{
+    position: relative;
+}
+
+.skill-item .skill-img{
     position: relative;
     width: 150px;
     height: 150px;
-    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    /* left: 10%; */
+}
+
+.skill-item .skill-subImg{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 /*================================ experience section style ================================*/
@@ -459,11 +497,16 @@ h2 .text{
 .exp-inner .exp-list .exp-item:nth-child(2n){
     margin-top: 150px;
     text-align: right;
+    justify-content: flex-start !important;
 }
 
 .exp-item-content{
     background: var(--black_light);
     box-shadow: 15px 15px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+.exp-inner .exp-list .exp-item:nth-child(2n) .exp-item-card {
+    justify-content: end;
 }
 
 .exp-content .title .text{
@@ -483,8 +526,10 @@ h2 .text{
 .exp-item-content img{
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 100px;
+    /* width: 150px; */
+    max-width: 50%;
+    /* height: 100px; */
+    max-height: 65px;
     margin-left: 5%;
     top: 20px;
 }
@@ -497,7 +542,13 @@ h2 .text{
 
 .exp-content .exp-item-card{
     padding: 30px 0;
+    display: flex;
+    align-items: baseline;
 }
+
+/* .exp-item-card:nth-child(odd){
+    display: flex;
+    justify-content: flex-end; */
 
 /*================================ project section style ================================*/
 .project{
@@ -897,7 +948,7 @@ box-shadow: 0px 10px 10px -10px rgba(255, 255, 255, 0.9), 0px 10px 10px -10px rg
     }
 
     .exp-item-content img{
-        width: 80%;
+        width: 50%;
         object-fit: cover;
     }
 
