@@ -24,6 +24,25 @@ $(document).ready(function() {
         loop: true
     });
 
+    // record the first window position
+    let lastPos = 0;
+    $(window).scroll(function(){
+      // if(this.scrollY >  $(window).height() -50){
+      if(this.scrollY >  50){
+          $('.navbar').addClass("sticky");
+          let currentPos = this.scrollY;
+          if(currentPos > lastPos) {
+            $('.navbar').css("top", "-80px");
+          } else {
+            $('.navbar').css("top", "0px");
+          }
+          lastPos = currentPos;//再記住現在位置，跟未來的位置做比較
+      }
+      else{
+          $('.navbar').removeClass("sticky");
+      }
+  });
+
     $('.navbar .menu li a').click(function(){
       // applying again smooth scroll on menu items click
       $('html').css("scrollBehavior", "smooth");
